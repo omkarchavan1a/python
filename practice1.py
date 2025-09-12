@@ -17,7 +17,7 @@ def is_armstrong(num):
          sum += digit ** num
          return num == num
 
-print(is_srmstrong(10))     
+print(is_armstrong(10))     
  
 # 3. Write a program to print the square of first 10 numbers using a loop.
 def square_number(num):
