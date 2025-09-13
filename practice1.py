@@ -75,11 +75,10 @@ def sum_of_add(n):
  
  
 # 9. Write a program to check if a number is a Harshad number (divisible by sum of its digits).
-def is_harshad(num):
-    sum = sum(int(digit) for digit in str(num))
-    return num % sum == 0
-
-print(is_harshad(18))
+def is_harshad_number(number):
+    """Check if a number is a Harshad number (divisible by sum of its digits)."""
+    digit_sum = sum(int(digit) for digit in str(number))
+    return number % digit_sum == 0
  
  
 # 10. Write a program to print the first 10 terms of the arithmetic progression (AP) series.
