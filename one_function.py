@@ -1,4 +1,4 @@
-# Write a program to print numbers from 1 to 10 using a one line function with out labda
+# Write a program to print numbers from 1 to 10 using a one line function with out lambda
 def print_numbers():return [i for i in range(1,11)]
 print(print_numbers())
 # Write a program to print even numbers between 1 to 50 .
@@ -80,3 +80,83 @@ print(sum_even_odd(12345))
 # Write a program to keep taking input from the user until they enter 0, then print the sum of all entered numbers.
 def sum_of_numbers():return sum(int(i) for i in input("Enter numbers (separated by spaces): ").split() if int(i) != 0)
 print(sum_of_numbers())
+
+# Write a Python program to print "Hello, World!".
+def hello_world():return "Hello, World!"
+print(hello_world())
+# Write a program to add two numbers entered by the user.
+def add_numbers(num1, num2):return num1 + num2
+print(add_numbers(1, 2))
+# Write a program to swap two variables without using a third variable.
+def swap_variables(num1, num2):return num2, num1
+print(swap_variables(1, 2))
+# Write a program to check if a number is even or odd.
+def is_even(num):return num % 2 == 0
+print(is_even(2))
+# Write a program to find the largest of three numbers.
+def largest_number(num1, num2, num3):return max(num1, num2, num3)
+print(largest_number(1, 2, 3))
+# Write a program to calculate the factorial of a number.
+def factorial(num):return 1 if num == 0 else num * factorial(num - 1)
+print(factorial(5))
+# Write a program to generate the Fibonacci series up to n terms.
+def fibonacci(n):return [0, 1] + [fibonacci(n-1)[-1] + fibonacci(n-1)[-2] for i in range(2, n)]
+print(fibonacci(10))
+
+# Write a program to reverse a number.
+def reverse_number(num):return int(str(num)[::-1])
+print(reverse_number(12345))
+# Write a program to check if a number is prime.
+def is_prime(num):return all(num % i != 0 for i in range(2, int(num/2)+1))
+print(is_prime(7))
+# Write a program to find the sum of digits of a number.
+def sum_digits(num):return sum(int(i) for i in str(num))
+print(sum_digits(12345))
+# Write a program to find the GCD of two numbers.
+def gcd(num1 ,num2):return num1 if num2 == 0 else gcd(num2, num1 % num2)
+print(gcd(12 , 18))
+# Write a program to check if a string is a palindrome.
+def is_palidrome(str):return str == str[::-1]
+print(is_palidrome("omo"))
+# Write a program to count vowels and consonants in a string.
+def count_vowels_consonants(str):return sum (1 for i in "aeiou" if i in str) 
+print(count_vowels_consonants("hello"))
+# Write a program to find the ASCII value of a character.
+def ascii(num):return ord(num)
+print(ascii("o"))
+# Write a program to sort a list without using built-in sort().
+def sort_list(list):return sorted(list)
+print(sort_list([4,2,5,6]))
+# Write a program to find the second largest number in a list.
+def second_largest(list):return sorted(list)[-2]
+print(second_largest([4,2,5,6]))
+# Write a program to remove duplicates from a list.
+def remove_duplicates(list): return list(set(list))
+print(remove_duplicates([1,2,2,3]))
+# Write a program to check if two strings are anagrams.
+def anagrams(str1,str2):return sorted(str1) == sorted(str2)
+print(anagrams ("omkar","marko"))
+# Write a program to merge two sorted lists.
+def merge(str2 , str3):return sorted(str2 + str3)
+print(merge([1,3,5,9],[1,5,4,8]))
+# Write a program to count the frequency of words in a string.
+def count_frequency(s):return {w: s.split().count(w) for w in s.split()}
+print(count_frequency("hello"))
+# Advanced (21–30)
+# Write a program to implement a simple calculator (add, subtract, multiply, divide).
+def calculator(num1, num2, operator):return eval(f"{num1} {operator} {num2}")
+print(calculator(1, 2, "+"))    
+# Write a program to check Armstrong numbers.
+def armstrong(num):return num == sum (int(i)** len(str(num))for i in str(num))
+print(armstrong(12312))
+# Write a program to convert decimal to binary, octal, and hexadecimal.
+def convert(num): return bin(num), oct(num), hex(num)
+print(convert(10))
+# Write a program to create a dictionary from two lists.
+
+# Write a program to find the largest and smallest elements in a tuple.
+# Write a program to find the factorial of a number using recursion.
+# Write a program to read and write a file.
+# Write a program to find the common elements in two sets.
+# Write a program to implement a class for a student with attributes (name, age, grade).
+# Write a program to generate a random password of given length.
