@@ -79,7 +79,7 @@ def is_harshad_number(number):
     """Check if a number is a Harshad number (divisible by sum of its digits)."""
     digit_sum = sum(int(digit) for digit in str(number))
     return number % digit_sum == 0
- 
+g 
  
 # 10. Write a program to print the first 10 terms of the arithmetic progression (AP) series.
 def arithmatic_progression(num):

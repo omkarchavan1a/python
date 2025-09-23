@@ -153,9 +153,14 @@ print(armstrong(12312))
 def convert(num): return bin(num), oct(num), hex(num)
 print(convert(10))
 # Write a program to create a dictionary from two lists.
-
+def create_dict(list1 , list2):return dict(zip(list1, list2))
+print(create_dict(["a", "b", "c"], [1, 2, 3]))
 # Write a program to find the largest and smallest elements in a tuple.
+def largest_smallest_tuple(tuple):return max(tuple), min(tuple)
+print(largest_smallest_tuple((1, 2, 3, 4, 5)))
 # Write a program to find the factorial of a number using recursion.
+def factorial_recursive(n):return 1 if n == 0 or n == 1 else: factorial_recursive(n-1) * n
+print(factorial_recursive())
 # Write a program to read and write a file.
 # Write a program to find the common elements in two sets.
 # Write a program to implement a class for a student with attributes (name, age, grade).
