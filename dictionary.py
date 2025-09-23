@@ -72,3 +72,60 @@ frequency = {}
 for i in sentence:
     frequency[i] = frequency.get(i,0) + 1
 print(frequency)
+
+
+
+
+# Write a program to swap keys and values in a dictionary (handle duplicate values).
+keys = {"apple":1,"banana":2,"cherry":3,"date":4,"elderberry":5}
+swapped_dict = {value:key for key,value in keys.items()}
+print(swapped_dict)
+# Write a program to remove all duplicate values from a dictionary.
+dict3 = {"W":23,"m":54 ,"n":23,"o":54,}
+swapped_dict = {value:key for key,value in keys.items()}
+for key,value in dict3.items():
+     if value in swapped_dict.values():
+            swapped_dict.pop(value)
+print(dict3)
+# Create a dictionary of numbers (1–20) and store whether each number is even or odd.
+even_odd_dict = {num : "even" if num % 2 == 0 else "odd" for num in range(1,21)}
+print(even_odd_dict)
+
+# Write a program to combine two dictionaries by adding values for common keys.
+dict4 = {"a":1,"b":2,"c":3,"d":4,"e":5}
+dict5 = {"b":6,"c":7,"d":8,"e":9,"f":10}
+combined_dict = {**dict4 , **dict5}
+print(combined_dict)
+
+# Write a program to check if two dictionaries are equal.
+dictionary1 = {"a":1,"b":2,"c":3,"d":4,"e":5}
+dictionary2 = {"b":6,"c":7,"d":8,"e":9,"f":10}
+print(dictionary1 == dictionary2)
+
+# Write a program to clear all elements from a dictionary.
+dict6 = {"a":1,"b":2,"c":3,"d":4,"e":5}
+dict6.clear()
+print(dict6)
+# Write a program to extract all unique values from a dictionary.
+dict7 = {"a":1,"b":2,"c":3,"d":4,"e":5}
+unique_values = set(dict7.values())
+print(unique_values)
+
+# Write a program to count the frequency of vowels in a given string using a dictionary.
+vowels = "aeiouAEIOU"
+vowel_count = {i : sentence.count(i) for i in vowels}
+print(vowel_count)
+# Write a program to create a dictionary where keys are subjects and values are lists of student marks.
+subjects = ["maths","science","english","history"]
+marks = [54,65,66,76]
+student_marks = dict(zip(subjects,marks))
+print(student_marks)
+
+# Write a program to convert a list of tuples into a dictionary.
+tuples = [("apple",1),("banana",2),("cherry",3)]
+dict8 = dict(tuples)
+print(dict8)
+
+lists = [1,2,3,4,5,6,7,8,9,10]
+dict9 = {i : i for i in lists}
+print(dict9)
