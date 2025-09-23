@@ -1,3 +1,4 @@
+from math import isqrt
 # 1.Write a program to check if a number is divisible by 5 and 11.
 def check_number(num):
     if num % 5 == 0 and num % 11 == 0:
@@ -21,18 +22,24 @@ print(is_armstrong(10))
  
 # 3. Write a program to print the square of first 10 numbers using a loop.
 def square_of_numbers(n):
-    """Print the square of numbers from 1 to n."""
     for i in range(1, n + 1):
         print(i ** 2)
 
 square_of_numbers(10)
-# 4. Write a program to check whether a number is perfect number or not.
-def perfect_number(num):
-    sum = 0
-    for i in range(1, num):
+def perfect_number(num: int) -> bool:
+    if num <= 1:
+        return num == 0
+    sum = 1  
+
+    limit = isqrt(num)
+    for i in range(2, limit + 1):
         if num % i == 0:
+            pair = num // i
             sum += i
-    return num == sum 
+            if pair != i and pair != num:
+                sum += pair
+
+    return num == sum
 
 print(perfect_number(6)) 
 # 5. Write a program to find the greatest common divisor (GCD) of two numbers using a loop.
@@ -78,8 +85,7 @@ def sum_of_add(n):
 def is_harshad_number(number):
     """Check if a number is a Harshad number (divisible by sum of its digits)."""
     digit_sum = sum(int(digit) for digit in str(number))
-    return number % digit_sum == 0
-g 
+    return number % digit_sum == 0 
  
 # 10. Write a program to print the first 10 terms of the arithmetic progression (AP) series.
 def arithmatic_progression(num):
